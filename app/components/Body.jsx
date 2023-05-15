@@ -13,24 +13,41 @@ const Body = () => {
     getAllProducts(setProducts);
   }, []);*/
 
+  function modifyAmount(operation, number) {
+    const modifyAmountButton = document.getElementById("modifyAmountInput");
+    //change value of product
+    console.log(modifyAmountButton.value);
+  }
+
   return (
     <div className="mb-24">
-      <h3>All products</h3>
-      <div className="p-12 flex flex-wrap bg-[#191D24] rounded-xl">
+      <h1 className="font-bold mb-12 text-center">All products</h1>
+      <div className="flex flex-rowflex-wrap p-12 bg-[#191D24] rounded-xl w-[92%] m-auto">
         {products.map((element, index) => (
           <div
-            className="flex-col items-center p-2 bg-red-200 rounded-xl shadow-sm justify-between h-[300px] fit-content"
+            className="flex flex-col items-center p-2 rounded-xl shadow-lg shadow-black justify-around h-[300px] w-[300px] m-4"
             key={index}
           >
-            <p className="text-center">{element.name}</p>
+            <p className="font-bold text-xl">{element.name}</p>
             <p>Quantité : {element.amout}</p>
-            <div className="flex items-center">
-              <AiFillMinusCircle className="text-xl" />
+            <div className="flex flex-row items-center">
+              <AiFillMinusCircle
+                className="text-xl"
+                onClick={() => {
+                  modifyAmount("minus", index);
+                }}
+              />
               <input
                 type="number"
                 className="rounded-xl focus:outline-none p-2 w-20 text-center mx-2"
+                id="modifyAmountInput"
               ></input>
-              <AiFillPlusCircle className="text-xl" />
+              <AiFillPlusCircle
+                className="text-xl"
+                onClick={() => {
+                  modifyAmount("plus", index);
+                }}
+              />
             </div>
             <button
               type="button"
