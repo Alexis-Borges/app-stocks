@@ -13,7 +13,7 @@ const Body = () => {
   }, []);*/
 
   return (
-    <div className="bg-white  mb-24">
+    <div className=" bg-neutral text-neutral-content min-h-screen ">
       <h3>All products</h3>
       <div className="p-12">
         {products.map((element, index) => (

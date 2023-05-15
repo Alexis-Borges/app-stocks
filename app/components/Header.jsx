@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <nav className="p-8 m-16">
+    <nav className="p-8 flex flex-initial">
       <Image
         src={"/logo-no-background.png"}
         width={300}
