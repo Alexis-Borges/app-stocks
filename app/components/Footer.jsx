@@ -5,7 +5,7 @@ import Image from "next/image";
 class Footer extends Component {
   render() {
     return (
-      <footer className="footer items-center p-4 bg-neutral text-neutral-content absolute bottom-0">
+      <footer className="footer items-center p-2 bg-neutral text-neutral-content fixed bottom-0">
         <div className="items-center grid-flow-col">
           <svg
             width="36"
@@ -20,13 +20,13 @@ class Footer extends Component {
           </svg>
           <p>Copyright © 2023 - All right reserved</p>
         </div>
-        <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+        <div className="flex gap-4 items-center md:justify-self-end">
           <Image
             className="mr-4"
             src="/images/logo-no-background.png"
             alt="My Image"
-            width={200}
-            height={200}
+            width={100}
+            height={100}
             priority
           />
           <a>
