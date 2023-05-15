@@ -20,9 +20,9 @@ const Body = () => {
   }
 
   return (
-    <div className="mb-24">
-      <h1 className="font-bold mb-12 text-center">All products</h1>
-      <div className="flex flex-rowflex-wrap p-12 bg-[#191D24] rounded-xl w-[92%] m-auto">
+    <div className="pb-24">
+      <h1 className="font-bold mb-6 text-center">All products</h1>
+      <div className="flex flex-row flex-wrap p-12 bg-[#191D24] rounded-xl w-[92%] m-auto">
         {products.map((element, index) => (
           <div
             className="flex flex-col items-center p-2 rounded-xl shadow-lg shadow-black justify-around h-[300px] w-[300px] m-4"
@@ -32,7 +32,7 @@ const Body = () => {
             <p>Quantité : {element.amout}</p>
             <div className="flex flex-row items-center">
               <AiFillMinusCircle
-                className="text-xl"
+                className="text-xl hover:text-[#8EBCFE]"
                 onClick={() => {
                   modifyAmount("minus", index);
                 }}
@@ -43,7 +43,7 @@ const Body = () => {
                 id="modifyAmountInput"
               ></input>
               <AiFillPlusCircle
-                className="text-xl"
+                className="text-xl hover:text-[#8EBCFE]"
                 onClick={() => {
                   modifyAmount("plus", index);
                 }}
