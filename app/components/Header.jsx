@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-
-class Header extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    );
-  }
-}
-
-export default Header;
-=======
 import Image from "next/image";
 
 const Header = () => {
@@ -29,4 +14,3 @@ const Header = () => {
 };
 
 export default Header;
->>>>>>> origin/main
